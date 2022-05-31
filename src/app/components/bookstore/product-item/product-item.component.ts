@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { gutendex } from 'src/app/model/gutendex';
+import { ListServiceService } from 'src/app/services/list-service.service';
 
 @Component({
   selector: 'ecom-product-item',
@@ -8,12 +8,21 @@ import { gutendex } from 'src/app/model/gutendex';
 })
 export class ProductItemComponent implements OnInit {
 
+  imgWidth = 175;
+  imgHeight = 230;
+  apiResult: any;
   //o componente item, que é filho do componente list somente vai receber a estrutura de dados como herança
-  @Input() livro!:gutendex;
+  @Input() livros!: any;
 
-  constructor() { }
+  constructor(private listService: ListServiceService) { }
 
   ngOnInit(): void {
   }
 
+  getBook(){
+    this.listService.getBook().subscribe(result => {
+      this.apiResult = result;
+      this.livros = this.apiResult.results;
+    })
+  }
 }

@@ -12,7 +12,7 @@ export class ListServiceService {
   //avisa que o retorno sera um json
   httpOptions = {
     headers: new HttpHeaders({
-        'content-type':'application/json; charset=utf-8'
+        'content-type':'application/json'
     })
   }
 

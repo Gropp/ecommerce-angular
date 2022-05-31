@@ -1,1 +1,23 @@
-<p>product-item works!</p>
+<div class="card shadow-sm">
+    <div class="card shadow-sm">
+        <!-- POR ALGUM MOTIVO DESCONHECIDO A VARIAVEL LIVROS NÃO É VISTA NESTE COMPONENTE -->
+        <!-- SE ESSES CARDS FOREM COLOCADOS DENTRO DO PRODUCT-LIST FUNCIONA -->
+        <!-- NAO DESCOBRI O MOTIVO -->
+        <!-- COMO NÃO PASSOU A AULA QUE FOI CRIADO A API EM C# PEGUEI UMA API DE LIVROS NA INTERNET -->
+        <!-- VOU COMENTAR TODO ESSE CODIGO E VOU PRO NO COMPONENTE LIST, ONDE FUNCIONA -->
+        <!-- FALTAVA INJETAR O SERVICO NO CONSTRUCT LOCAL -->
+
+        <img class="bd-placeholder-img card-img-top"  [src]="livros.formats['image/jpeg']" title="image" [style.width.px]="imgWidth" [style.height.px]="imgHeight">
+        <div class="card-body">
+            <p class="card-text">Titulo: {{livros.title}}</p>
+            <p class="card-text">Autor(a): {{livros.authors[0].name}}</p>
+            <p class="card-text">Nascimento Autor(a): {{livros.authors[0].birth_year}}</p>
+            <p class="card-text">Genero: {{livros.subjects[3]}}</p>
+            <p class="card-text">Tipo de Mídia: {{livros.media_type}}</p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-primary m-2">Orçar</button>
+                <button type="button" class="btn btn-sm btn-outline-primary m-2">Detalhes</button>
+            </div>
+        </div>
+    </div>
+</div>

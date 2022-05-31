@@ -1,1 +1,17 @@
-<p>Lista de produtos</p>
+<div class="row">
+    <div class="col-md-3" *ngFor="let livro of livros">
+        <!-- <img class="bd-placeholder-img card-img-top"  [src]="l.formats['image/jpeg']" title="image">
+        <div class="card-body">
+            <p class="card-text">Titulo: {{l.title}}</p>
+            <p class="card-text">Autor(ra): {{l.authors[0].name}}</p>
+            <p class="card-text">Nascimento Autora: {{l.authors[0].birth_year}}</p>
+            <p class="card-text">Genero: {{l.subjects[3]}}</p>
+            <p class="card-text">Tipo de Mídia: {{l.media_type}}</p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-primary m-2">Orçar</button>
+                <button type="button" class="btn btn-sm btn-outline-primary m-2">Detalhes</button>
+            </div>
+        </div> -->
+        <ecom-product-item [livros]="livro"></ecom-product-item>
+    </div>
+</div>
